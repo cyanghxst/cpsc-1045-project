@@ -38,3 +38,7 @@ function getCoordinates(event) {
 
     console.log(row[i][j]);
 }
+
+function getPieces() {
+
+}
