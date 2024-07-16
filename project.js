@@ -30,11 +30,8 @@ function drawBoard() {
 drawBoard();
 
 function getCoordinates(event) {
-    let x = event.offsetX;
-    let y = event.offsetY;
-
-    let i = Math.floor(x/100);
-    let j = Math.floor(y/100);
+    let i = Math.floor(event.offsetX/100);
+    let j = Math.floor(evet.offsetY/100);
 
     console.log(row[i][j]);
 }
