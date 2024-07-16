@@ -1,7 +1,7 @@
 const $ = id => document.getElementById(id);
 const ctx = $("myCanvas").getContext("2d");
 
-// $("myCanvas").addEventListener("click", getCoordinate);
+$("myCanvas").addEventListener("click", getCoordinates);
 
 let row = [];
 row[0] = ["", "red", "", "red", "", "red", "", "red"];
@@ -28,3 +28,13 @@ function drawBoard() {
 }
 
 drawBoard();
+
+function getCoordinates(event) {
+    let x = event.offsetX;
+    let y = event.offsetY;
+
+    let i = Math.floor(x/100);
+    let j = Math.floor(y/100);
+
+    console.log(row[i][j]);
+}
