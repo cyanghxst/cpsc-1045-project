@@ -28,22 +28,3 @@ function drawBoard() {
 }
 
 drawBoard();
-
-// function drawPieces() {
-//     for (let row = 0; row <= 800; row += 100) {
-//         for (let col = 0; col <= 800; col += 100) {
-//             ctx.beginPath();
-//             ctx.fillStyle = "#ff0000";
-
-//             if (row % 200 != 0) {
-//                 if (col % 200 != 0) {
-//                     ctx.arc(row + 25, col - 75, 35, 0, 2 * Math.PI);
-//                 }
-//             }
-
-//             ctx.fill();
-//         }
-//     }
-// }
-
-// drawPieces();
