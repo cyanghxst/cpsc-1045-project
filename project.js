@@ -2,6 +2,8 @@ const $ = id => document.getElementById(id);
 const ctx = $("myCanvas").getContext("2d");
 
 $("myCanvas").addEventListener("click", getCoordinates);
+$("myCanvas").addEventListener("click", drawPieces);
+// $("myCanvas").addEventListener("click", placePieces);
 
 let row = [];
 row[0] = ["", "red", "", "red", "", "red", "", "red"];
@@ -30,12 +32,35 @@ function drawBoard() {
 drawBoard();
 
 function getCoordinates(event) {
-    let i = Math.floor(event.offsetX/100);
-    let j = Math.floor(evet.offsetY/100);
+    let x = event.offsetX;
+    let y = event.offsetY;
 
+    let j = Math.floor(x/100);
+    let i = Math.floor(y/100);
+
+    console.log(`\nX: ${x}, Y: ${y}`);
     console.log(row[i][j]);
 }
 
-function getPieces() {
+function drawPieces() {
 
 }
+
+// function placePieces() {
+//     let x = event.offsetX;
+//     let y = event.offsetY;
+
+//     let j = Math.floor(x/100);
+//     let i = Math.floor(y/100);
+
+//     ctx.beginPath();
+
+//     if (row[i][j] == "red") {
+//         ctx.fillStyle = "#ff0000";
+//     } else if (row[i][j] == "grey") {
+//         ctx.fillStyle = "grey";
+//     }
+
+//     ctx.arc((j * 100) + 50, (i * 100) + 50, 35, 0, 2 * Math.PI);
+//     ctx.fill();
+// }
