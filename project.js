@@ -31,11 +31,12 @@ function getCoordinates(event) {
     let x = event.offsetX;
     let y = event.offsetY;
 
-    let i = Math.floor(x/100);
-    let j = Math.floor(y/100);
+    let col = Math.floor(x/100);
+    let row = Math.floor(y/100);
 
-    console.log(`\nX: ${x}, Y: ${y}`);
-    console.log(array[j][i]);
+    // console.log(`\nX: ${x}, Y: ${y}`);
+    console.log(`row: ${row}, col: ${col}`);
+    alert(array[row][col]);
 }
 
 function drawPieces() {
