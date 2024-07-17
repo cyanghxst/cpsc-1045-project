@@ -14,15 +14,15 @@ array[6] = ["", "grey", "", "grey", "", "grey", "", "grey"];
 array[7] = ["grey", "", "grey", "", "grey", "", "grey", ""];
 
 function drawBoard() {
-    for (let row = 0; row <= 800; row += 100) {
-        for (let col = 0; col <= 800; col += 100) {
-            if (row % 200 != 0) {
-                col % 200 != 0 ? ctx.fillStyle = "#ffffff" : ctx.fillStyle = "#000000";
+    for (let i = 0; i <= 800; i += 100) {
+        for (let j = 0; j <= 800; j += 100) {
+            if (i % 200 != 0) {
+                j % 200 != 0 ? ctx.fillStyle = "#ffffff" : ctx.fillStyle = "#000000";
             } else {
-                col % 200 != 0 ? ctx.fillStyle = "#000000" : ctx.fillStyle = "#ffffff";
+                j % 200 != 0 ? ctx.fillStyle = "#000000" : ctx.fillStyle = "#ffffff";
             }
 
-            ctx.fillRect(row, col, 100, 100);
+            ctx.fillRect(j, i, 100, 100);
         }
     }
 }
