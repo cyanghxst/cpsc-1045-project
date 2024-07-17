@@ -27,8 +27,6 @@ function drawBoard() {
     }
 }
 
-drawBoard();
-
 function getCoordinates(event) {
     let x = event.offsetX;
     let y = event.offsetY;
@@ -60,4 +58,7 @@ function drawPieces() {
 
 }
 
-drawPieces();
+window.addEventListener("load", function() {
+    drawBoard();
+    drawPieces();
+})
