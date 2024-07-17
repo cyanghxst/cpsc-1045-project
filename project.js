@@ -49,11 +49,11 @@ function drawPieces() {
             ctx.beginPath();
 
             if (array[i][j] == "red") {
-                ctx.fillStyle = "red";
+                ctx.fillStyle = "#ff0000";
                 ctx.arc((j * 100) + 50, (i * 100) + 50, 35, 0, 2 * Math.PI);
                 ctx.fill();
             } else if (array[i][j] == "gray") {
-                ctx.fillStyle = "gray";
+                ctx.fillStyle = "#808080";
                 ctx.arc((j * 100) + 50, (i * 100) + 50, 35, 0, 2 * Math.PI);
                 ctx.fill();
             }
