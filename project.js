@@ -9,9 +9,9 @@ array[1] = ["red", "", "red", "", "red", "", "red", ""];
 array[2] = ["", "red", "", "red", "", "red", "", "red"];
 array[3] = ["", "", "", "", "", "", "", ""];
 array[4] = ["", "", "", "", "", "", "", ""];
-array[5] = ["grey", "", "grey", "", "grey", "", "grey", ""];
-array[6] = ["", "grey", "", "grey", "", "grey", "", "grey"];
-array[7] = ["grey", "", "grey", "", "grey", "", "grey", ""];
+array[5] = ["gray", "", "gray", "", "gray", "", "gray", ""];
+array[6] = ["", "gray", "", "gray", "", "gray", "", "gray"];
+array[7] = ["gray", "", "gray", "", "gray", "", "gray", ""];
 
 function drawBoard() {
     for (let i = 0; i <= 800; i += 100) {
@@ -45,11 +45,11 @@ function drawPieces() {
             ctx.beginPath();
 
             if (array[i][j] == "red") {
-                ctx.fillStyle = "#ff0000";
+                ctx.fillStyle = "red";
                 ctx.arc((j * 100) + 50, (i * 100) + 50, 35, 0, 2 * Math.PI);
                 ctx.fill();
-            } else if (array[i][j] == "grey") {
-                ctx.fillStyle = "grey";
+            } else if (array[i][j] == "gray") {
+                ctx.fillStyle = "gray";
                 ctx.arc((j * 100) + 50, (i * 100) + 50, 35, 0, 2 * Math.PI);
                 ctx.fill();
             }
