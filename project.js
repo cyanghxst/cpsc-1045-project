@@ -2,8 +2,6 @@ const $ = id => document.getElementById(id);
 const ctx = $("myCanvas").getContext("2d");
 
 $("myCanvas").addEventListener("click", getCoordinates);
-// $("myCanvas").addEventListener("click", drawPieces);
-// $("myCanvas").addEventListener("click", placePieces);
 
 let array = [];
 array[0] = ["", "red", "", "red", "", "red", "", "red"];
