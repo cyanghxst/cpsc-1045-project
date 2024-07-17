@@ -33,72 +33,31 @@ function getCoordinates(event) {
     let x = event.offsetX;
     let y = event.offsetY;
 
-    let j = Math.floor(x/100);
-    let i = Math.floor(y/100);
+    let i = Math.floor(x/100);
+    let j = Math.floor(y/100);
 
     console.log(`\nX: ${x}, Y: ${y}`);
-    console.log(array[i][j]);
+    console.log(array[j][i]);
 }
 
 function drawPieces() {
-    for (let row = 0; row <= 800; row += 100) {
-        for (let col = 0; col <= 800; col += 100) {
-            let j = Math.floor(row/100);
-            let i = Math.floor(col/100);
-
+    for (let i = 0; i < 8; i++) {
+        for (let j = 0; j < 8; j ++) {
             ctx.beginPath();
 
-            if (array[j][i] == "red") {
+            if (array[i][j] == "red") {
                 ctx.fillStyle = "#ff0000";
-            } else if (array[j][i] == "grey") {
+                ctx.arc((j * 100) + 50, (i * 100) + 50, 35, 0, 2 * Math.PI);
+                ctx.fill();
+            } else if (array[i][j] == "grey") {
                 ctx.fillStyle = "grey";
+                ctx.arc((j * 100) + 50, (i * 100) + 50, 35, 0, 2 * Math.PI);
+                ctx.fill();
             }
 
-            ctx.arc((j * 100) + 50, (i * 100) + 50, 35, 0, 2 * Math.PI);
-            ctx.fill();
         }
     }
 
 }
 
 drawPieces();
-
-// function placePieces() {
-    //     let x = event.offsetX;
-    //     let y = event.offsetY;
-
-    //     let j = Math.floor(x/100);
-    //     let i = Math.floor(y/100);
-
-    //     ctx.beginPath();
-
-    //     if (row[i][j] == "red") {
-        //         ctx.fillStyle = "#ff0000";
-        //     } else if (row[i][j] == "grey") {
-            //         ctx.fillStyle = "grey";
-            //     }
-
-    //     ctx.arc((j * 100) + 50, (i * 100) + 50, 35, 0, 2 * Math.PI);
-    //     ctx.fill();
-    // }
-
-// function drawPieces() {
-//     for (let row = 0; row <= 8; row++) {
-//         for (let col = 0; col <= 8; col++) {
-//             let j = Math.floor(row/100);
-//             let i = Math.floor(col/100);
-
-//             ctx.beginPath();
-
-//             if (array[j][i] == "red") {
-//                 ctx.fillStyle = "#ff0000";
-//             } else if (array[j][i] == "grey") {
-//                 ctx.fillStyle = "grey";
-//             }
-
-//             ctx.arc((j * 100) + 50, (i * 100) + 50, 35, 0, 2 * Math.PI);
-//             ctx.fill();
-//         }
-//     }
-
-// }
