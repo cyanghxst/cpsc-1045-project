@@ -13,10 +13,10 @@ class Piece {
         this.isKing = isKing;
     }
 
-    draw(color) {
+    draw() {
         ctx.beginPath();
-        ctx.fillStyle = color;
-        ctx.arc((col * 100) + 50, (row * 100) + 50, 35, 0, 2 * Math.PI);
+        ctx.fillStyle = this.color;
+        ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 35, 0, 2 * Math.PI);
         ctx.fill();
     }
 }
