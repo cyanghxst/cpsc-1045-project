@@ -26,6 +26,14 @@ class Piece {
         ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 35, 0, 2 * Math.PI);
         ctx.fill();
     }
+
+    checkKing() {
+        if (this.color == "red" && this.row == 7 ) {
+            this.isKing = true;
+        } else if (this.color == "gray" && this.row == 0 ) {
+            this.isKing = true;
+        }
+    }
 }
 
 // global array for storing checkers board
