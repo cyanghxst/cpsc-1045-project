@@ -64,21 +64,9 @@ function getCoordinates(event) {
 function drawPieces() {
     for (let i = 0; i < 8; i++) {
         for (let j = 0; j < 8; j ++) {
-            ctx.beginPath();
-
-            if (array[i][j] == "red") {
-                ctx.fillStyle = "#ff0000";
-                ctx.arc((j * 100) + 50, (i * 100) + 50, 35, 0, 2 * Math.PI);
-                ctx.fill();
-            } else if (array[i][j] == "gray") {
-                ctx.fillStyle = "#808080";
-                ctx.arc((j * 100) + 50, (i * 100) + 50, 35, 0, 2 * Math.PI);
-                ctx.fill();
-            }
-
+            array[j][i].draw();
         }
     }
-
 }
 
 // calls functions when finish reloading
