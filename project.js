@@ -94,14 +94,14 @@ function getSelectedPiece() {
     for (let row = 0; row < 8; row++) {
         for (let col = 0; col < 8; col++) {
             if (array[row][col] != "") {
-                if (array[row][col].isClicked == true) {
+                if (array[row][col].isClicked === true) {
                     return array[row][col];
-                } else {
-                    return null;
                 }
             }
         }
     }
+
+    return null;
 }
 
 // calls functions when finish reloading
