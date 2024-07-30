@@ -1,7 +1,7 @@
 const $ = id => document.getElementById(id);
 const ctx = $("myCanvas").getContext("2d");
 
-$("myCanvas").addEventListener("click", getCoordinates);
+$("myCanvas").addEventListener("click", pickPiece);
 
 // blueprints for piece object
 class Piece {
@@ -69,8 +69,8 @@ function drawBoard() {
     }
 }
 
-// gets x and y locations for each tile and alert whether if it's red or gray
-function getCoordinates(event) {
+// gets x and y locations for each tile, checks if it's already clicked then redraws board and pieces
+function pickPiece(event) {
     let x = event.offsetX;
     let y = event.offsetY;
 
