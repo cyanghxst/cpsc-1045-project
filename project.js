@@ -14,6 +14,13 @@ class Piece {
     }
 
     draw() {
+        if (this.isClicked == true) {
+            ctx.beginPath();
+            ctx.fillStyle = "yellow";
+            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 40, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+
         ctx.beginPath();
         ctx.fillStyle = this.color;
         ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 35, 0, 2 * Math.PI);
