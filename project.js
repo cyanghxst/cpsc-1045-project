@@ -62,9 +62,19 @@ function getCoordinates(event) {
     let col = Math.floor(x/100);
     let row = Math.floor(y/100);
 
+    if (array[row][col] != "") {
+        if (getSelectedPiece() != null) {
+            getSelectedPiece().isClicked = !getSelectedPiece().isClicked;
+        } else {
+            array[row][col].isClicked = true;
+        }
+    }
+
+    drawPieces();
+
     // console.log(`\nX: ${x}, Y: ${y}`);
     console.log(`row: ${row}, col: ${col}`);
-    alert(array[row][col]);
+    // alert(array[row][col]);
 }
 
 // draws checkers pieces
