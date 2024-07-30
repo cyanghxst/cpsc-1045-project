@@ -94,6 +94,8 @@ function getSelectedPiece() {
             if (array[row][col] != "") {
                 if (array[row][col].isClicked == true) {
                     return array[row][col];
+                } else {
+                    return null;
                 }
             }
         }
