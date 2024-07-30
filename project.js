@@ -74,7 +74,6 @@ function getCoordinates(event) {
     drawBoard();
     drawPieces();
 
-    // console.log(`\nX: ${x}, Y: ${y}`);
     console.log(`row: ${row}, col: ${col}`);
     // alert(array[row][col]);
 }
