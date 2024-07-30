@@ -65,11 +65,13 @@ function getCoordinates(event) {
     if (array[row][col] != "") {
         if (getSelectedPiece() != null) {
             getSelectedPiece().isClicked = !getSelectedPiece().isClicked;
-        } else {
-            array[row][col].isClicked = true;
         }
+
+        array[row][col].isClicked = true;
     }
 
+    ctx.clearRect(0, 0, 800, 800);
+    drawBoard();
     drawPieces();
 
     // console.log(`\nX: ${x}, Y: ${y}`);
