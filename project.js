@@ -34,6 +34,13 @@ class Piece {
             this.isKing = true;
         }
     }
+
+    move(newRow, newCol) {
+        this.row = newRow;
+        this.col = newCol;
+
+        checkKing();
+    }
 }
 
 // global array for storing checkers board
