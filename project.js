@@ -11,13 +11,13 @@ class Piece {
         this.color = color;
         this.isClicked = isClicked;
         this.isKing = isKing;
+    }
 
-        this.draw = function(color) {
-            ctx.beginPath();
-            ctx.fillStyle = color;
-            ctx.arc((col * 100) + 50, (row * 100) + 50, 35, 0, 2 * Math.PI);
-            ctx.fill();
-        }
+    draw(color) {
+        ctx.beginPath();
+        ctx.fillStyle = color;
+        ctx.arc((col * 100) + 50, (row * 100) + 50, 35, 0, 2 * Math.PI);
+        ctx.fill();
     }
 }
 
