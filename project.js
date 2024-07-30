@@ -23,9 +23,9 @@ class Piece {
 
 // global array for storing checkers board
 let array = [];
-array[0] = ["", "red", "", "red", "", "red", "", "red"];
-array[1] = ["red", "", "red", "", "red", "", "red", ""];
-array[2] = ["", "red", "", "red", "", "red", "", "red"];
+array[0] = ["", new Piece(0, 1, "red"), "", new Piece(0, 3, "red"), "", new Piece(0, 5, "red"), "", new Piece(0, 7, "red")];
+array[1] = [new Piece(1, 0, "red"), "", new Piece(1, 2, "red"), "", new Piece(1, 4, "red"), "", new Piece(1, 6, "red"), ""];
+array[2] = ["", new Piece(2, 1, "red"), "", new Piece(2, 3, "red"), "", new Piece(2, 5, "red"), "", new Piece(2, 7, "red")];
 array[3] = ["", "", "", "", "", "", "", ""];
 array[4] = ["", "", "", "", "", "", "", ""];
 array[5] = ["gray", "", "gray", "", "gray", "", "gray", ""];
