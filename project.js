@@ -62,9 +62,11 @@ function getCoordinates(event) {
 
 // draws checkers pieces
 function drawPieces() {
-    for (let i = 0; i < 8; i++) {
-        for (let j = 0; j < 8; j ++) {
-            array[j][i].draw();
+    for (let row = 0; row < 8; row++) {
+        for (let col = 0; col < 8; col ++) {
+            if (array[row][col] != "") {
+                array[row][col].draw();
+            }
         }
     }
 }
