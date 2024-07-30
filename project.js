@@ -71,6 +71,18 @@ function drawPieces() {
     }
 }
 
+function getSelectedPiece() {
+    for (let row = 0; row < 8; row++) {
+        for (let col = 0; col < 8; col++) {
+            if (array[row][col] != "") {
+                if (array[row][col].isClicked == true) {
+                    return array[row][col];
+                }
+            }
+        }
+    }
+}
+
 // calls functions when finish reloading
 window.addEventListener("load", function() {
     drawBoard();
