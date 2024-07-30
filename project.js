@@ -3,6 +3,17 @@ const ctx = $("myCanvas").getContext("2d");
 
 $("myCanvas").addEventListener("click", getCoordinates);
 
+// blueprints for piece object
+class Piece {
+    constructor(row, col, color, isClicked, isKing) {
+        this.row = row;
+        this.col = col;
+        this.color = color;
+        this.isClicked = isClicked;
+        this.isKing = isKing;
+    }
+}
+
 // global array for storing checkers board
 let array = [];
 array[0] = ["", "red", "", "red", "", "red", "", "red"];
