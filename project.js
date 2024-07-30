@@ -27,15 +27,15 @@ array[7] = ["gray", "", "gray", "", "gray", "", "gray", ""];
 
 // draws the board
 function drawBoard() {
-    for (let i = 0; i <= 800; i += 100) {
-        for (let j = 0; j <= 800; j += 100) {
-            if (i % 200 != 0) {
-                j % 200 != 0 ? ctx.fillStyle = "#ffffff" : ctx.fillStyle = "#000000";
+    for (let i = 0; i <= 8; i++) {
+        for (let j = 0; j <= 8; j++) {
+            if (i % 2 != 0) {
+                j % 2 != 0 ? ctx.fillStyle = "#ffffff" : ctx.fillStyle = "#000000";
             } else {
-                j % 200 != 0 ? ctx.fillStyle = "#000000" : ctx.fillStyle = "#ffffff";
+                j % 2 != 0 ? ctx.fillStyle = "#000000" : ctx.fillStyle = "#ffffff";
             }
 
-            ctx.fillRect(j, i, 100, 100);
+            ctx.fillRect(j * 100, i * 100, 100, 100);
         }
     }
 }
