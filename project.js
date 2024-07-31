@@ -128,8 +128,12 @@ function pickPiece(event) {
 
     if (array[row][col] != "") {
         if (getSelectedPiece() != null) {
-            getSelectedPiece().isClicked = false;
-            array[row][col].isClicked = !array[row][col].isClicked;
+            if (getSelectedPiece() == array[row][col]) {
+                getSelectedPiece().isClicked = false;
+            } else {
+                getSelectedPiece().isClicked = false;
+                array[row][col].isClicked = !array[row][col].isClicked;
+            }
         } else {
             array[row][col].isClicked = !array[row][col].isClicked;
         }
