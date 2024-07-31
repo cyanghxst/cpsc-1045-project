@@ -39,7 +39,7 @@ class Piece {
         this.row = newRow;
         this.col = newCol;
 
-        checkKing();
+        this.checkKing();
     }
 
     isValidMove(newRow, newCol) {
@@ -109,6 +109,17 @@ function pickPiece(event) {
         }
 
         array[row][col].isClicked = true;
+    }
+
+    if (getSelectedPiece() != null) {
+        let picked = array[getSelectedPiece().row][getSelectedPiece().col];
+
+        if (picked.isValidMove(row, col)) {
+            picked = "";
+            getSelectedPiece().move();
+            array[row][col] = getSelectedPiece();
+            picked.isClicked = false;
+        }
     }
 
     ctx.clearRect(0, 0, 800, 800);
