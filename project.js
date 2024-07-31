@@ -116,9 +116,9 @@ function pickPiece(event) {
 
         if (picked.isValidMove(row, col)) {
             picked = "";
-            getSelectedPiece().move();
+            getSelectedPiece().move(row, col);
             array[row][col] = getSelectedPiece();
-            picked.isClicked = false;
+            array[row][col].isClicked = false;
         }
     }
 
