@@ -109,17 +109,15 @@ function pickPiece(event) {
         }
 
         array[row][col].isClicked = true;
-    }
-
-    if (getSelectedPiece() != null) {
-        let picked = array[getSelectedPiece().row][getSelectedPiece().col];
-
-        if (picked.isValidMove(row, col)) {
-            picked = "";
+    } else {
+        if (getSelectedPiece().isValidMove(row, col)) {
+            array[getSelectedPiece().row][getSelectedPiece().col] = "";
+            console.log(array);
             getSelectedPiece().move(row, col);
             array[row][col] = getSelectedPiece();
-            array[row][col].isClicked = false;
         }
+
+        getSelectedPiece().isClicked = false;
     }
 
     ctx.clearRect(0, 0, 800, 800);
