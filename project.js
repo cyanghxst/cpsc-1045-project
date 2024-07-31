@@ -41,12 +41,6 @@ class Piece {
             ctx.strokeStyle = "white";
             ctx.arc((this.col * 100) + 50, (this.row * 100) + 50 + 6, 10, 0, Math.PI);
             ctx.stroke();
-
-            ctx.beginPath();
-            ctx.strokeStyle = "white";
-            ctx.moveTo((this.col * 100) + 40, (this.row * 100) + 50 + 6);
-            ctx.lineTo((this.col * 100) + 60, (this.row * 100) + 50 + 6);
-            ctx.stroke();
         }
     }
 
