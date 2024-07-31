@@ -43,11 +43,10 @@ class Piece {
     }
 
     isValidMove(newRow, newCol) {
-        if (newRow == this.row - 1 && newCol == this.col || newRow == this.row + 1 && newCol == this.col ||
-            newRow == this.row && newCol == this.col - 1 || newRow == this.row && newCol == this.col + 1) {
+        if (Math.abs(newRow - this.row) == 1 && newCol == this.col || Math.abs(newCol - this.col) == 1 && newRow == this.row) {
             return false;
-        } else if (((this.color == "red" || this.isKing == true) && (newRow == this.row + 1 && (newCol == this.col - 1 || newCol == this.col + 1))) ||
-            ((this.color == "gray" || this.isKing == true) && (newRow == this.row - 1 && (newCol == this.col - 1 || newCol == this.col + 1)))) {
+        } else if ((this.color == "red" || this.isKing == true) && (newRow == this.row + 1 && Math.abs(newCol - this.col) == 1) ||
+            (this.color == "gray" || this.isKing == true) && (newRow == this.row - 1 && Math.abs(newCol - this.col) == 1)) {
             return true;
         }
     }
