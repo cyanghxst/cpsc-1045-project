@@ -111,10 +111,12 @@ function pickPiece(event) {
         array[row][col].isClicked = true;
     } else {
         if (getSelectedPiece().isValidMove(row, col)) {
+            let picked = getSelectedPiece();
+
             array[getSelectedPiece().row][getSelectedPiece().col] = "";
+            picked.move(row, col);
+            array[row][col] = picked;
             console.log(array);
-            getSelectedPiece().move(row, col);
-            array[row][col] = getSelectedPiece();
         }
 
         getSelectedPiece().isClicked = false;
