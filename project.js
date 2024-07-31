@@ -49,12 +49,22 @@ class Piece {
             return true;
         } else if ((this.color == "red" || this.isKing == true) && (newRow == this.row + 2 && Math.abs(newCol - this.col) == 2)) {
             if ((array[newRow - 1][newCol - 1] != "" && array[newRow - 1][newCol - 1].color == "gray") || (array[newRow - 1][newCol + 1] != "" && array[newRow - 1][newCol + 1].color == "gray")) {
+                array[newRow - 1][newCol - 1] = "";
+                array[newRow - 1][newCol + 1] = "";
                 return true;
+            } else {
+                return false;
             }
         } else if ((this.color == "gray" || this.isKing == true) && (newRow == this.row - 2 && Math.abs(newCol - this.col) == 2)) {
             if ((array[newRow + 1][newCol - 1] != "" && array[newRow + 1][newCol - 1].color == "red") || (array[newRow + 1][newCol + 1] != "" && array[newRow + 1][newCol + 1].color == "red")) {
+                array[newRow + 1][newCol - 1] = "";
+                array[newRow + 1][newCol + 1] = "";
                 return true;
+            } else {
+                return false;
             }
+        } else {
+            return false;
         }
     }
 }
