@@ -1,3 +1,5 @@
+// cpsc 1045 project: checkers
+
 const $ = id => document.getElementById(id);
 const ctx = $("myCanvas").getContext("2d");
 
