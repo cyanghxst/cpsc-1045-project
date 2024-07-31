@@ -25,6 +25,29 @@ class Piece {
         ctx.fillStyle = this.color;
         ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 35, 0, 2 * Math.PI);
         ctx.fill();
+
+        if (this.isKing == true) {
+            ctx.beginPath();
+            ctx.fillStyle = "white";
+            ctx.arc((this.col * 100) + 37, (this.row * 100) + 40, 5, 0, 2 * Math.PI);
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.fillStyle = "white";
+            ctx.arc((this.col * 100) + 63, (this.row * 100) + 40, 5, 0, 2 * Math.PI);
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "white";
+            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50 + 6, 10, 0, Math.PI);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "white";
+            ctx.moveTo((this.col * 100) + 40, (this.row * 100) + 50 + 6);
+            ctx.lineTo((this.col * 100) + 60, (this.row * 100) + 50 + 6);
+            ctx.stroke();
+        }
     }
 
     checkKing() {
