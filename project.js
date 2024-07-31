@@ -36,7 +36,7 @@ class Piece {
 
             ctx.beginPath();
             ctx.fillStyle = "#CE3D46";
-            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 26, 0, 2 * Math.PI);
+            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 27, 0, 2 * Math.PI);
             ctx.fill();
         } else {
             ctx.beginPath();
@@ -51,7 +51,7 @@ class Piece {
 
             ctx.beginPath();
             ctx.fillStyle = "#EFE0BE";
-            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 26, 0, 2 * Math.PI);
+            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 27, 0, 2 * Math.PI);
             ctx.fill();
         }
 
