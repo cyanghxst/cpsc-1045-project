@@ -4,12 +4,40 @@
 body {
     background-color: #F5F5F5;
     text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
+    font-size: 35px;
     text-align: center;
 }
 
 h1, p {
     font-family: "Poppins", "sans-serif";
+}
+
+canvas {
+    border-radius: 10px;
+    border: 1px solid #DADADA;
+}
+
+.header {
+    text-align: center;
+}
+
+.outer {
+    /* position: absolute; */
+    width: 800px;
+    height: 800px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 4px #B6B6B6;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
 }
