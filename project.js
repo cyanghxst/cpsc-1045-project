@@ -165,6 +165,7 @@ function drawPieces() {
     }
 }
 
+// returns selected piece
 function getSelectedPiece() {
     for (let row = 0; row < 8; row++) {
         for (let col = 0; col < 8; col++) {
