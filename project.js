@@ -41,6 +41,16 @@ class Piece {
 
         checkKing();
     }
+
+    isValidMove(newRow, newCol) {
+        if (newRow == this.row - 1 && newCol == this.col || newRow == this.row + 1 && newCol == this.col ||
+            newRow == this.row && newCol == this.col - 1 || newRow == this.row && newCol == this.col + 1) {
+            return false;
+        } else if (((this.color == "red" || this.isKing == true) && (newRow == this.row + 1 && (newCol == this.col - 1 || newCol == this.col + 1))) ||
+            ((this.color == "gray" || this.isKing == true) && (newRow == this.row - 1 && (newCol == this.col - 1 || newCol == this.col + 1)))) {
+            return true;
+        }
+    }
 }
 
 // global array for storing checkers board
