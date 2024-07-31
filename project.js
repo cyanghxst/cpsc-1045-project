@@ -48,10 +48,10 @@ class Piece {
         } else if ((this.color == "red" || this.isKing == true) && (newRow == this.row + 1 && Math.abs(newCol - this.col) == 1) || (this.color == "gray" || this.isKing == true) && (newRow == this.row - 1 && Math.abs(newCol - this.col) == 1) && array[newRow][newCol] == "") {
             return true;
         } else if ((this.color == "red" || this.isKing == true) && (newRow == this.row + 2 && Math.abs(newCol - this.col) == 2)) {
-            if (array[newRow - 1][newCol - 1] != "" && array[newRow - 1][newCol - 1].color == "gray") {
+            if (newCol - this.col == 2 && array[newRow - 1][newCol - 1] != "" && array[newRow - 1][newCol - 1].color == (this.color == "red" ? "gray" : "red")) {
                 array[newRow - 1][newCol - 1] = "";
                 return true;
-            } else if (array[newRow - 1][newCol + 1] != "" && array[newRow - 1][newCol + 1].color == "gray") {
+            } else if (newCol - this.col == -2 && array[newRow - 1][newCol + 1] != "" && array[newRow - 1][newCol + 1].color == (this.color == "red" ? "gray" : "red")) {
                 array[newRow - 1][newCol + 1] = "";
                 return true;
             } else {
