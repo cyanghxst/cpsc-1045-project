@@ -18,15 +18,42 @@ class Piece {
     draw() {
         if (this.isClicked == true) {
             ctx.beginPath();
-            ctx.fillStyle = "yellow";
-            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 40, 0, 2 * Math.PI);
+            ctx.fillStyle = "#F5F692";
+            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 43, 0, 2 * Math.PI);
             ctx.fill();
         }
 
-        ctx.beginPath();
-        ctx.fillStyle = this.color;
-        ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 35, 0, 2 * Math.PI);
-        ctx.fill();
+        if (this.color == "red") {
+            ctx.beginPath();
+            ctx.fillStyle = "#CE3D46";
+            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 38, 0, 2 * Math.PI);
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.fillStyle = "#AA333A";
+            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 29, 0, 2 * Math.PI);
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.fillStyle = "#CE3D46";
+            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 26, 0, 2 * Math.PI);
+            ctx.fill();
+        } else {
+            ctx.beginPath();
+            ctx.fillStyle = "#EFE0BE";
+            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 38, 0, 2 * Math.PI);
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.fillStyle = "#D6C8AA";
+            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 29, 0, 2 * Math.PI);
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.fillStyle = "#EFE0BE";
+            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 26, 0, 2 * Math.PI);
+            ctx.fill();
+        }
 
         if (this.isKing == true) {
             ctx.beginPath();
