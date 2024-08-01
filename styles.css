@@ -2,10 +2,10 @@
 
 body {
     background-color: #F5F5F5;
-    text-align: center;
     margin: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 h1 {
