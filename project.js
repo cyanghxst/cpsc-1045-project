@@ -18,8 +18,8 @@ class Piece {
     draw() {
         if (this.isClicked == true) {
             ctx.beginPath();
-            ctx.fillStyle = "#F5F692";
-            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 43, 0, 2 * Math.PI);
+            ctx.fillStyle = "#DBCB61";
+            ctx.fillRect((this.col * 100), (this.row * 100), 100, 100);
             ctx.fill();
         }
 
