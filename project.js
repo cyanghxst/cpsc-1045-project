@@ -18,7 +18,7 @@ class Piece {
     draw() {
         if (this.isClicked == true) {
             ctx.beginPath();
-            ctx.fillStyle = "#DBCB61";
+            ctx.fillStyle = "#DBD461";
             ctx.fillRect((this.col * 100), (this.row * 100), 100, 100);
             ctx.fill();
         }
