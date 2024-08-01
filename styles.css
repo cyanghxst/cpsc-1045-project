@@ -27,7 +27,13 @@ canvas {
 }
 
 .header {
-    text-align: center;
+    width: 840px;
+    text-align: left;
+}
+
+.head-container {
+    display: flex;
+    justify-content: center;
 }
 
 .outer {
