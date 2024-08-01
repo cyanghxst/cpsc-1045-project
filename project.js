@@ -139,7 +139,6 @@ function drawBoard() {
             } else {
                 j % 2 != 0 ? ctx.fillStyle = "#78AE80" : ctx.fillStyle = "#F3F2EF";
             }
-
             ctx.fillRect(j * 100, i * 100, 100, 100);
         }
     }
