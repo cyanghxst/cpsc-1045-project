@@ -43,7 +43,7 @@ canvas {
     background-color: #DDDDDD;
 }
 
-.container {
+.main-container {
     display: flex;
     justify-content: center;
 }
