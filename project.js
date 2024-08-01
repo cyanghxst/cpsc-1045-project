@@ -155,9 +155,9 @@ function drawBoard() {
     for (let i = 0; i <= 8; i++) {
         for (let j = 0; j <= 8; j++) {
             if (i % 2 != 0) {
-                j % 2 != 0 ? ctx.fillStyle = "#FAF9F6" : ctx.fillStyle = "#78AE80";
+                j % 2 != 0 ? ctx.fillStyle = "#F3F2EF" : ctx.fillStyle = "#78AE80";
             } else {
-                j % 2 != 0 ? ctx.fillStyle = "#78AE80" : ctx.fillStyle = "#FAF9F6";
+                j % 2 != 0 ? ctx.fillStyle = "#78AE80" : ctx.fillStyle = "#F3F2EF";
             }
 
             ctx.fillRect(j * 100, i * 100, 100, 100);
