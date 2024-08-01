@@ -85,7 +85,6 @@ class Piece {
     move(newRow, newCol) {
         this.row = newRow;
         this.col = newCol;
-
         this.checkKing();
     }
 
