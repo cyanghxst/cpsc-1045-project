@@ -27,13 +27,12 @@ canvas {
 }
 
 .outer {
-    /* position: absolute; */
     width: 800px;
     height: 800px;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 12px;
     padding: 20px;
-    box-shadow: 0px 0px 10px #DADADA;
+    box-shadow: 0px 0px 8px #DADADA;
 }
 
 .container {
