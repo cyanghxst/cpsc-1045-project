@@ -35,10 +35,10 @@ class Piece {
 
         if (this.isKing == true) {
             if (this.color == "red") {
-                this.drawCircle("#CE3D46", 28);
+                this.drawCircle("#CE3D46", 18);
                 this.drawCrown("#AA333A");
             } else {
-                this.drawCircle("#EFE0BE", 28);
+                this.drawCircle("#EFE0BE", 18);
                 this.drawCrown("#D6C8AA");
             }
         }
