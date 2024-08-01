@@ -30,24 +30,16 @@ class Piece {
             ctx.fill();
 
             ctx.beginPath();
-            ctx.fillStyle = "#AA333A";
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = "#AA333A";
             ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 30, 0, 2 * Math.PI);
-            ctx.fill();
+            ctx.stroke();
 
             ctx.beginPath();
-            ctx.fillStyle = "#CE3D46";
-            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 28, 0, 2 * Math.PI);
-            ctx.fill();
-
-            ctx.beginPath();
-            ctx.fillStyle = "#AA333A";
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = "#AA333A";
             ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 16, 0, 2 * Math.PI);
-            ctx.fill();
-
-            ctx.beginPath();
-            ctx.fillStyle = "#CE3D46";
-            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 14, 0, 2 * Math.PI);
-            ctx.fill();
+            ctx.stroke();
         } else {
             ctx.beginPath();
             ctx.fillStyle = "#EFE0BE";
@@ -55,24 +47,16 @@ class Piece {
             ctx.fill();
 
             ctx.beginPath();
-            ctx.fillStyle = "#D6C8AA";
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = "#D6C8AA";
             ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 31, 0, 2 * Math.PI);
-            ctx.fill();
+            ctx.stroke();
 
             ctx.beginPath();
-            ctx.fillStyle = "#EFE0BE";
-            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 29, 0, 2 * Math.PI);
-            ctx.fill();
-
-            ctx.beginPath();
-            ctx.fillStyle = "#D6C8AA";
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = "#D6C8AA";
             ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 16, 0, 2 * Math.PI);
-            ctx.fill();
-
-            ctx.beginPath();
-            ctx.fillStyle = "#EFE0BE";
-            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 14, 0, 2 * Math.PI);
-            ctx.fill();
+            ctx.stroke();
         }
 
         if (this.isKing == true) {
