@@ -33,7 +33,7 @@ canvas {
     background-color: white;
     border-radius: 20px;
     padding: 20px;
-    box-shadow: 0px 0px 4px #B6B6B6;
+    box-shadow: 0px 0px 10px #DADADA;
 }
 
 .container {
