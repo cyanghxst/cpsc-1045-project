@@ -6,7 +6,7 @@ const ctx = $("myCanvas").getContext("2d");
 $("myCanvas").addEventListener("click", pickPiece);
 
 // color variables
-let hl = "#DBD461";
+let hl = "#DCDF7E";
 let p1Bg = "#CE3D46";
 let p1Fg = "#A73339";
 let p2Bg = "#EFE0BE";
