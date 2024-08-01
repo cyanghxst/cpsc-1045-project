@@ -76,20 +76,43 @@ class Piece {
         }
 
         if (this.isKing == true) {
-            ctx.beginPath();
-            ctx.fillStyle = "white";
-            ctx.arc((this.col * 100) + 37, (this.row * 100) + 40, 5, 0, 2 * Math.PI);
-            ctx.fill();
+            if (this.color == "red") {
+                ctx.beginPath();
+                ctx.fillStyle = "#CE3D46";
+                ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 28, 0, 2 * Math.PI);
+                ctx.fill();
 
-            ctx.beginPath();
-            ctx.fillStyle = "white";
-            ctx.arc((this.col * 100) + 63, (this.row * 100) + 40, 5, 0, 2 * Math.PI);
-            ctx.fill();
+                ctx.beginPath();
+                ctx.strokeStyle = "#AA333A";
+                ctx.lineWidth = 2;
+                ctx.moveTo((this.col * 100) + 40, (this.row * 100) + 62);
+                ctx.lineTo((this.col * 100) + 35, (this.row * 100) + 44);
+                ctx.lineTo((this.col * 100) + 45, (this.row * 100) + 54);
+                ctx.lineTo((this.col * 100) + 50, (this.row * 100) + 38);
+                ctx.lineTo((this.col * 100) + 55, (this.row * 100) + 54);
+                ctx.lineTo((this.col * 100) + 65, (this.row * 100) + 44);
+                ctx.lineTo((this.col * 100) + 60, (this.row * 100) + 62);
+                ctx.lineTo((this.col * 100) + 40, (this.row * 100) + 62);
+                ctx.stroke();
+            } else {
+                ctx.beginPath();
+                ctx.fillStyle = "#EFE0BE";
+                ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 28, 0, 2 * Math.PI);
+                ctx.fill();
 
-            ctx.beginPath();
-            ctx.strokeStyle = "white";
-            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50 + 6, 10, 0, Math.PI);
-            ctx.stroke();
+                ctx.beginPath();
+                ctx.strokeStyle = "#D6C8AA";
+                ctx.lineWidth = 2;
+                ctx.moveTo((this.col * 100) + 40, (this.row * 100) + 62);
+                ctx.lineTo((this.col * 100) + 35, (this.row * 100) + 44);
+                ctx.lineTo((this.col * 100) + 45, (this.row * 100) + 54);
+                ctx.lineTo((this.col * 100) + 50, (this.row * 100) + 38);
+                ctx.lineTo((this.col * 100) + 55, (this.row * 100) + 54);
+                ctx.lineTo((this.col * 100) + 65, (this.row * 100) + 44);
+                ctx.lineTo((this.col * 100) + 60, (this.row * 100) + 62);
+                ctx.lineTo((this.col * 100) + 40, (this.row * 100) + 62);
+                ctx.stroke();
+            }
         }
     }
 
