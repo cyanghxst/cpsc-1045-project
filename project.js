@@ -171,7 +171,8 @@ function pickPiece(event) {
             array[getSelectedPiece().row][getSelectedPiece().col] = "";
             picked.move(row, col);
             array[row][col] = picked;
-            console.log(array);
+
+            // console.log(array);
         }
 
         getSelectedPiece().isClicked = false;
@@ -181,7 +182,7 @@ function pickPiece(event) {
     drawBoard();
     drawPieces();
 
-    console.log(`row: ${row}, col: ${col}`);
+    // console.log(`row: ${row}, col: ${col}`);
     // alert(array[row][col]);
 }
 
