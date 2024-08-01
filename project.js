@@ -10,7 +10,7 @@ let hl = "#DBD461";
 let p1Bg = "#CE3D46";
 let p1Fg = "#A73339";
 let p2Bg = "#EFE0BE";
-let p2Fg = "#D5C7AA";
+let p2Fg = "#D1C4A7";
 let tile1 = "#F3F2EF";
 let tile2 = "#78AE80";
 
