@@ -24,80 +24,54 @@ class Piece {
         }
 
         if (this.color == "red") {
-            ctx.beginPath();
-            ctx.fillStyle = "#CE3D46";
-            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 38, 0, 2 * Math.PI);
-            ctx.fill();
-
-            ctx.beginPath();
-            ctx.lineWidth = 2;
-            ctx.strokeStyle = "#AA333A";
-            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 30, 0, 2 * Math.PI);
-            ctx.stroke();
-
-            ctx.beginPath();
-            ctx.lineWidth = 2;
-            ctx.strokeStyle = "#AA333A";
-            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 16, 0, 2 * Math.PI);
-            ctx.stroke();
+            this.drawCircle("#CE3D46", 38);
+            this.drawRing("#AA333A", 30);
+            this.drawRing("#AA333A", 16);
         } else {
-            ctx.beginPath();
-            ctx.fillStyle = "#EFE0BE";
-            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 38, 0, 2 * Math.PI);
-            ctx.fill();
-
-            ctx.beginPath();
-            ctx.lineWidth = 2;
-            ctx.strokeStyle = "#D6C8AA";
-            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 31, 0, 2 * Math.PI);
-            ctx.stroke();
-
-            ctx.beginPath();
-            ctx.lineWidth = 2;
-            ctx.strokeStyle = "#D6C8AA";
-            ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 16, 0, 2 * Math.PI);
-            ctx.stroke();
+            this.drawCircle("#EFE0BE", 38);
+            this.drawRing("#D6C8AA", 30);
+            this.drawRing("#D6C8AA", 16);
         }
 
         if (this.isKing == true) {
             if (this.color == "red") {
-                ctx.beginPath();
-                ctx.fillStyle = "#CE3D46";
-                ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 28, 0, 2 * Math.PI);
-                ctx.fill();
-
-                ctx.beginPath();
-                ctx.strokeStyle = "#AA333A";
-                ctx.lineWidth = 2;
-                ctx.moveTo((this.col * 100) + 40, (this.row * 100) + 62);
-                ctx.lineTo((this.col * 100) + 35, (this.row * 100) + 44);
-                ctx.lineTo((this.col * 100) + 45, (this.row * 100) + 54);
-                ctx.lineTo((this.col * 100) + 50, (this.row * 100) + 38);
-                ctx.lineTo((this.col * 100) + 55, (this.row * 100) + 54);
-                ctx.lineTo((this.col * 100) + 65, (this.row * 100) + 44);
-                ctx.lineTo((this.col * 100) + 60, (this.row * 100) + 62);
-                ctx.lineTo((this.col * 100) + 40, (this.row * 100) + 62);
-                ctx.stroke();
+                this.drawCircle("#CE3D46", 28);
+                this.drawCrown("#AA333A");
             } else {
-                ctx.beginPath();
-                ctx.fillStyle = "#EFE0BE";
-                ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, 28, 0, 2 * Math.PI);
-                ctx.fill();
-
-                ctx.beginPath();
-                ctx.strokeStyle = "#D6C8AA";
-                ctx.lineWidth = 2;
-                ctx.moveTo((this.col * 100) + 40, (this.row * 100) + 62);
-                ctx.lineTo((this.col * 100) + 35, (this.row * 100) + 44);
-                ctx.lineTo((this.col * 100) + 45, (this.row * 100) + 54);
-                ctx.lineTo((this.col * 100) + 50, (this.row * 100) + 38);
-                ctx.lineTo((this.col * 100) + 55, (this.row * 100) + 54);
-                ctx.lineTo((this.col * 100) + 65, (this.row * 100) + 44);
-                ctx.lineTo((this.col * 100) + 60, (this.row * 100) + 62);
-                ctx.lineTo((this.col * 100) + 40, (this.row * 100) + 62);
-                ctx.stroke();
+                this.drawCircle("#EFE0BE", 28);
+                this.drawCrown("#D6C8AA");
             }
         }
+    }
+
+    drawCircle(color, radius) {
+        ctx.beginPath();
+        ctx.fillStyle = color;
+        ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, radius, 0, 2 * Math.PI);
+        ctx.fill();
+    }
+
+    drawRing(color, radius) {
+        ctx.beginPath();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = color;
+        ctx.arc((this.col * 100) + 50, (this.row * 100) + 50, radius, 0, 2 * Math.PI);
+        ctx.stroke();
+    }
+
+    drawCrown(color) {
+        ctx.beginPath();
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2;
+        ctx.moveTo((this.col * 100) + 40, (this.row * 100) + 62);
+        ctx.lineTo((this.col * 100) + 35, (this.row * 100) + 44);
+        ctx.lineTo((this.col * 100) + 45, (this.row * 100) + 54);
+        ctx.lineTo((this.col * 100) + 50, (this.row * 100) + 38);
+        ctx.lineTo((this.col * 100) + 55, (this.row * 100) + 54);
+        ctx.lineTo((this.col * 100) + 65, (this.row * 100) + 44);
+        ctx.lineTo((this.col * 100) + 60, (this.row * 100) + 62);
+        ctx.lineTo((this.col * 100) + 40, (this.row * 100) + 62);
+        ctx.stroke();
     }
 
     checkKing() {
