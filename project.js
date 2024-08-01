@@ -5,6 +5,15 @@ const ctx = $("myCanvas").getContext("2d");
 
 $("myCanvas").addEventListener("click", pickPiece);
 
+// color variables
+let hl = "#DBD461";
+let p1Bg = "#CE3D46";
+let p1Fg = "#AA333A";
+let p2Bg = "#EFE0BE";
+let p2Fg = "#D6C8AA";
+let tile1 = "#F3F2EF";
+let tile2 = "#78AE80";
+
 // blueprints for piece object
 class Piece {
     constructor(row, col, color, isClicked, isKing) {
@@ -18,28 +27,28 @@ class Piece {
     draw() {
         if (this.isClicked == true) {
             ctx.beginPath();
-            ctx.fillStyle = "#DBD461";
+            ctx.fillStyle = hl;
             ctx.fillRect((this.col * 100), (this.row * 100), 100, 100);
             ctx.fill();
         }
 
         if (this.color == "red") {
-            this.drawCircle("#CE3D46", 38);
-            this.drawRing("#AA333A", 30);
-            this.drawRing("#AA333A", 16);
+            this.drawCircle(p1Bg, 38);
+            this.drawRing(p1Fg, 30);
+            this.drawRing(p1Fg, 16);
         } else {
-            this.drawCircle("#EFE0BE", 38);
-            this.drawRing("#D6C8AA", 30);
-            this.drawRing("#D6C8AA", 16);
+            this.drawCircle(p2Bg, 38);
+            this.drawRing(p2Fg, 30);
+            this.drawRing(p2Fg, 16);
         }
 
         if (this.isKing == true) {
             if (this.color == "red") {
-                this.drawCircle("#CE3D46", 18);
-                this.drawCrown("#AA333A");
+                this.drawCircle(p1Bg, 18);
+                this.drawCrown(p1Fg);
             } else {
-                this.drawCircle("#EFE0BE", 18);
-                this.drawCrown("#D6C8AA");
+                this.drawCircle(p2Bg, 18);
+                this.drawCrown(p2Fg);
             }
         }
     }
@@ -150,9 +159,9 @@ function drawBoard() {
     for (let i = 0; i <= 8; i++) {
         for (let j = 0; j <= 8; j++) {
             if (i % 2 != 0) {
-                j % 2 != 0 ? ctx.fillStyle = "#F3F2EF" : ctx.fillStyle = "#78AE80";
+                j % 2 != 0 ? ctx.fillStyle = tile1 : ctx.fillStyle = tile2;
             } else {
-                j % 2 != 0 ? ctx.fillStyle = "#78AE80" : ctx.fillStyle = "#F3F2EF";
+                j % 2 != 0 ? ctx.fillStyle = tile2 : ctx.fillStyle = tile1;
             }
             ctx.fillRect(j * 100, i * 100, 100, 100);
         }
