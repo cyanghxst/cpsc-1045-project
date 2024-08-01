@@ -18,8 +18,7 @@ h1, p {
 }
 
 canvas {
-    border-radius: 7px;
-    /* border: 1px solid #DADADA; */
+    border-radius: 8px;
 }
 
 .header {
