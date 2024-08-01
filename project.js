@@ -86,7 +86,7 @@ class Piece {
     checkKing() {
         if (this.color == "red" && this.row == 7 ) {
             this.isKing = true;
-        } else if (this.color == "gray" && this.row == 0 ) {
+        } else if (this.color == "cream" && this.row == 0 ) {
             this.isKing = true;
         }
     }
@@ -103,7 +103,7 @@ class Piece {
             return false;
         } else if ((this.color == "red" || this.isKing == true) &&
             (newRow == this.row + 1 && Math.abs(newCol - this.col) == 1) ||
-            (this.color == "gray" || this.isKing == true) &&
+            (this.color == "cream" || this.isKing == true) &&
             (newRow == this.row - 1 && Math.abs(newCol - this.col) == 1) &&
             array[newRow][newCol] == "") {
             return true;
@@ -111,27 +111,27 @@ class Piece {
             (newRow == this.row + 2 && Math.abs(newCol - this.col) == 2)) {
             if (newCol - this.col == 2 &&
                 array[newRow - 1][newCol - 1] != "" &&
-                array[newRow - 1][newCol - 1].color == (this.color == "red" ? "gray" : "red")) {
+                array[newRow - 1][newCol - 1].color == (this.color == "red" ? "cream" : "red")) {
                 array[newRow - 1][newCol - 1] = "";
                 return true;
             } else if (newCol - this.col == -2 &&
                 array[newRow - 1][newCol + 1] != "" &&
-                array[newRow - 1][newCol + 1].color == (this.color == "red" ? "gray" : "red")) {
+                array[newRow - 1][newCol + 1].color == (this.color == "red" ? "cream" : "red")) {
                 array[newRow - 1][newCol + 1] = "";
                 return true;
             } else {
                 return false;
             }
-        } else if ((this.color == "gray" || this.isKing == true) &&
+        } else if ((this.color == "cream" || this.isKing == true) &&
             (newRow == this.row - 2 && Math.abs(newCol - this.col) == 2)) {
             if (newCol - this.col == 2 &&
                 array[newRow + 1][newCol - 1] != "" &&
-                array[newRow + 1][newCol - 1].color == (this.color == "gray" ? "red" : "gray")) {
+                array[newRow + 1][newCol - 1].color == (this.color == "cream" ? "red" : "cream")) {
                 array[newRow + 1][newCol - 1] = "";
                 return true;
             } else if (newCol - this.col == -2 &&
                 array[newRow + 1][newCol + 1] != "" &&
-                array[newRow + 1][newCol + 1].color == (this.color == "gray" ? "red" : "gray")) {
+                array[newRow + 1][newCol + 1].color == (this.color == "cream" ? "red" : "cream")) {
                 array[newRow + 1][newCol + 1] = "";
                 return true;
             } else {
@@ -150,9 +150,9 @@ array[1] = [new Piece(1, 0, "red"), "", new Piece(1, 2, "red"), "", new Piece(1,
 array[2] = ["", new Piece(2, 1, "red"), "", new Piece(2, 3, "red"), "", new Piece(2, 5, "red"), "", new Piece(2, 7, "red")];
 array[3] = ["", "", "", "", "", "", "", ""];
 array[4] = ["", "", "", "", "", "", "", ""];
-array[5] = [new Piece(5, 0, "gray"), "", new Piece(5, 2, "gray"), "", new Piece(5, 4, "gray"), "", new Piece(5, 6, "gray"), ""];
-array[6] = ["", new Piece(6, 1, "gray"), "", new Piece(6, 3, "gray"), "", new Piece(6, 5, "gray"), "", new Piece(6, 7, "gray")];
-array[7] = [new Piece(7, 0, "gray"), "", new Piece(7, 2, "gray"), "", new Piece(7, 4, "gray"), "", new Piece(7, 6, "gray"), ""];
+array[5] = [new Piece(5, 0, "cream"), "", new Piece(5, 2, "cream"), "", new Piece(5, 4, "cream"), "", new Piece(5, 6, "cream"), ""];
+array[6] = ["", new Piece(6, 1, "cream"), "", new Piece(6, 3, "cream"), "", new Piece(6, 5, "cream"), "", new Piece(6, 7, "cream")];
+array[7] = [new Piece(7, 0, "cream"), "", new Piece(7, 2, "cream"), "", new Piece(7, 4, "cream"), "", new Piece(7, 6, "cream"), ""];
 
 // draws the board
 function drawBoard() {
