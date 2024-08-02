@@ -191,7 +191,7 @@ function pickPiece(event) {
         if (getSelectedPiece().isValidMove(row, col)) {
             let picked = getSelectedPiece();
 
-            array[getSelectedPiece().row][getSelectedPiece().col] = "";
+            array[picked.row][picked.col] = "";
             picked.move(row, col);
             array[row][col] = picked;
 
